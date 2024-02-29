@@ -1,8 +1,5 @@
 let fghj = 0
 basic.forever(function () {
-    fghj = input.compassHeading()
-})
-basic.forever(function () {
     if (45 < fghj && fghj < 135) {
         basic.showLeds(`
             . . # . .
@@ -21,7 +18,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (225 < fghj || fghj < 315) {
+    if (225 < fghj && fghj < 315) {
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -48,4 +45,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
+})
+basic.forever(function () {
+    fghj = input.compassHeading()
 })
