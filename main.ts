@@ -3,7 +3,7 @@ basic.forever(function () {
     fghj = input.compassHeading()
 })
 basic.forever(function () {
-    if (fghj < 90 && fghj < 135) {
+    if (45 < fghj && fghj < 135) {
         basic.showLeds(`
             . . # . .
             . # . . .
@@ -12,7 +12,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (fghj < 180 && fghj < 225) {
+    if (135 < fghj && fghj < 225) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -21,7 +21,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if ((225 as any) < (270 as any) || (270 as any) < (315 as any)) {
+    if (225 < fghj || fghj < 315) {
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -30,7 +30,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if ((315 as any) < (360 as any)) {
+    if (315 < fghj) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -39,7 +39,7 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if ((0 as any) < (45 as any)) {
+    if (fghj < 45) {
         basic.showLeds(`
             . . # . .
             . # # # .
